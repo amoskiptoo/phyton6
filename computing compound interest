@@ -1,0 +1,17 @@
+ def compound_interest(principal, rate, time, compounds_per_year):
+        """
+        Calculates compound interest given the principal, annual interest rate, time in years, and number of compounds per year.
+        """
+        # Calculate the total number of compounds over the time period
+        n = compounds_per_year * time
+
+        # Calculate the interest rate per compound period
+        r = rate / compounds_per_year
+
+        # Calculate the total amount of interest
+        interest = principal * (1 + r) ** n - principal
+
+        # Calculate the final amount
+        amount = principal * (1 + r) ** n
+
+        return amount,interest
